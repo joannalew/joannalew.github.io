@@ -51,30 +51,39 @@
 			<p></p>
 			<p>We now know how to make posts on Reddit, but what's that? You want to never post anything and want to just laze and lurk? Well, we can do that too!</p>
 			
-			<p>Here is the code for upvoting the fifth post on the second page of <a href="http://askreddit.reddit.com/">/r/AskReddit</a>.</p>
-			<iframe width="100%" height="300" src="https://jsfiddle.net/joanna4649/z47escp5/6/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>Here is the code for upvoting the fourth post on the second page of <a href="http://askreddit.reddit.com/">/r/AskReddit</a>.</p>
+			<iframe width="100%" height="300" src="https://jsfiddle.net/joanna4649/77pmkbzL/3/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 			<p></p>
 
-			<p>Let's take a closer look at the code. First, to make a post to a subreddit, we need to know which subreddit to post to, the title of our post, and the content of our post. We can make a self post, whose content is comprised of text, or a link post, which when clicked, redirects to another site. In this case, we will make a link post. We declare those three pieces of information as variables, <code>SUBREDDIT</code>, <code>TITLE</code>, and <code>LINK</code> to be passed to a function later.</p>
+			<p>The initialization and login process is the same as before. What's new is the scope. Since we are using <a href="https://www.reddit.com/dev/api/#GET_api_v1_me">/api/v1/me</a>, we will need <code>identity</code> in the scope. Requesting a subreddit's hot page with <a href="https://www.reddit.com/dev/api/oauth#GET_hot">/r/subreddit/hot</a> requires <code>read</code> in the scope. We are also using <a href="https://www.reddit.com/dev/api/#POST_api_vote">/api/vote</a>, which requires <code>vote</code> in the scope.</p>
 
-			<p>The oauth portion of the code is simple and straightforward. It is nearly same as the code from earlier, when we requested information about our account. However, note that the scope is different this time. On the Reddit API page, you can find what scope is necessary for a request by looking at the green box next to the request. For example, next to the <a href="https://www.reddit.com/dev/api/#POST_api_submit">/api/submit</a> request, one can see that 'submit' is necessary in the scope.</p>
+			<p>We go to the Subreddit of our choosing by getting a promise for a listing of that Subreddit with the code, <code>reddit('/r/askreddit/hot').listing();</code>. We go to a certain page on that Subreddit depending on how many times we write the code <code>  return slice.next();</code>. Since we want to go to the second page, we call it once. We can call it again to move to the third page. Note that a <code>slice</code> is 25 posts, which is the default posts per page for a Reddit account. If this value is changed for your account, running the code may cause a different post to be upvoted.</p>
 
-			<p>Now, the meat of the code, the function that submits the link. It's short and simple, but where did it come from? <a href="https://www.reddit.com/dev/api/">Reddit's wonderful API documentation</a>. The part that we're concerned with at the moment is shown below.</p>
+			<p>We choose which post on that page to upvote using <code>slice.children[index]</code>. It is numbered as an array, so the first post has an index value of 0, the second post has an index value of 1, and so on. In our case, since we want to upvote the fourth post, we put in an index value of 3. We save the post as <code>upvoteThis</code> to use later.</p>
+
+			<p>The upvoting is done by a POST request using <a href="https://www.reddit.com/dev/api/#POST_api_vote">/api/vote</a>. Once again, we can consult the API documentation to figure out what parameters we need and what values they should be. Below is the part of the documentation we're presently concerned with.</p>
+
+			<img src="img/img6-1.png" class="img-responsive">
+			<p id="hotfix1">p</p>
+
+			<p>According to the documentation, dir is given a value of 1 to upvote, 0 to cancel any upvotes or downvotes, and -1 to downvote. We want to upvote a post, so we pass it a value of 1.</p>
+
+			<p>To get the fullname of a post, we must know the type of post it is (link or text) and its unique ID. The fullname is in the format type, underscore, ID. For example, a link post might have the fullname t3_15bfi0, with t3 indicating it is a link post, and 15bfi0 being its unique ID. We pass the fullname (<code>upvoteThis.kind + '_' + upvoteThis.data.id</code>) to the parameter id, in order to indicate which post to upvote.</p>
+
+			<p>And that's all there is to it! Let's look at the result. Check that the post was indeed upvoted by going to the second page of <a href="https://www.reddit.com/r/AskReddit/">/r/AskReddit</a>.</p>
 			
-			<img src="img/img5-1.png" class = "img-responsive">
-			<p id="hotfix1">p</p>
-			<p>The documentation walks us step-by-step through what parameters we need and what values they should be. We put the string <code>'json'</code> as the api_type since that is what the instructions tell us to do. Same with kind, sr, title, etc. The documentation also explains why we pass the boolean value <code>true</code> is given to resubmit. If it was false, we'd get an error if another person already submitted the same link, which is pretty likely! Isn't Reddit's API documentation great? </p>
-
-			<p>Let's look at our results. Check out <a href="https://www.reddit.com/r/bottest/">/r/bottest</a> to see if your link submitted properly. If it did, it should look something like this.</p>
-			<img src="img/img5-2.png" class = "img-responsive">
+			<img src="img/img6-2.png" class="img-responsive">
 			<p id="hotfix1">p</p>
 
-			<p>But wait... there's more! Let's see what's in our console.</p>
-			<img src="img/img5-3.png" class = "img-responsive">
+			<p>We can also confirm that the action occurred by checking the console. We log to console our username, the title of the post we upvoted, and the URL of the post.</p>
+
+			<img src="img/img6-3.png" class="img-responsive">
 			<p id="hotfix1">p</p>
-			<p>The URL of our post is logged in our console, along with its unique Reddit ID. The ID of the post itself is <code>5de7wq</code>, and its full name is <code>t3_5de7wq</code>. The 't3' part indicates that it is a link post. The empty array of errors means we've successfully made our first Reddit post using Reddit's API. Hooray!</p>
+			
+			<p>Now we can post or lurk to our heart's content using Reddit's API!</p>
+
 			<p id="hotfix1">p</p>
-			<p><a href = "page4.html" class = "btn btn-lg btn-default">&laquo; Previous</a> <a href = "page6.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
+			<p><a href = "page5.html" class = "btn btn-lg btn-default">&laquo; Previous</a> <a href = "page7.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
 		</div>
 		</div>
 	</div>
