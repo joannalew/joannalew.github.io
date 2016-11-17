@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reddit API Tutorial</title>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+	</head>
+
+	<body>
+
+	<!-- Navbar -->
+		<div class = "navbar navbar-default navbar-static-top">
+			<div class = "container">
+				<a href = "index.html" class = "navbar-brand">Reddit API Tutorial</a>
+				
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-left">
+						<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Navigation<b class = "caret"></b></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "page2.html">Getting an API Key</a></li>
+								<li><a href = "page3.html">Using Command Line</a></li>
+								<li><a href = "page4.html">Using Snoocore</a></li>
+							</ul>
+						</li>
+						<li><a href = "https://www.reddit.com/dev/api">Reddit API</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+	
+	<!-- Jumbotron -->
+	<div class = "container">
+		<div class = "jumbotron">
+			<div><h1>Using the Reddit API</h1></div>
+			<p></p>
+			<p>At this point, you're probably thinking, "Hey! This is nifty, but where's the code?" So let's move on to the fun stuff!</p>
+			
+			<div><h2>Method #2: Using a Wrapper</h2></div>
+			<p>Wrappers allow for easy access to Reddit's API and make its use much simpler. A list of unofficial clients for Reddit's API can be found <a href="https://github.com/reddit/reddit/wiki/API-Wrappers">here</a>. In this tutorial, we will be using <a href="https://github.com/trevorsenior/snoocore">Snoocore</a>, a Node.js Wrapper.</p>
+			<ol>
+			<li>First, make sure you have Node.js. If you don't, you can download it <a href="https://nodejs.org/en/">here</a>.</li>
+			<li>Make a directory for your bot. We will call our project directory BotFolder.</li>
+			<li>In your directory, install Snoocore by typing <code>npm install snoocore</code> in Terminal or Command Line.<p></p>
+				<img src="img/img4-1.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+			
+			<li>Make a file named "app.js" in your project directory.</li>
+			<li>In the "app.js" file, copy and paste the following code. Put in a name for your userAgent, such as "FuturamaBot by /u/BeamMeUpBotty". Put in your client ID, client secret, Reddit username, and Reddit password. Then, save the file.</li>
+			<p><iframe width="100%" height="300" src="https://jsfiddle.net/joanna4649/qprqc0g9/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+			<li>Now, back in Terminal or Command Line, run app.js by typing <code>node app.js</code>.<p></p>
+				<img src="img/img4-2.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+			<p>We now have all the information about our account, just like what we got using Terminal. But enough with the account information. Let's actually do something and write some code.</p>
+
+			<p id="hotfix1">p</p>
+			<p><a href = "page3.html" class = "btn btn-lg btn-default">&laquo; Previous</a>
+			<a href = "page5.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
+		</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<div class = "navbar navbar-default navbar-fixed-bottom">
+		<div class = "container">
+			<p class = "navbar-text pull-left">Written by Joanna Lew</p>
+		</div>
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+	</body>
+</html>
