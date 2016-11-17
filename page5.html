@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+		<title>Reddit API Tutorial</title>
+		
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+	</head>
+
+	<body>
+
+	<!-- Navbar -->
+		<div class = "navbar navbar-default navbar-static-top">
+			<div class = "container">
+				<a href = "index.html" class = "navbar-brand">Reddit API Tutorial</a>
+				
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-left">
+						<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Navigation<b class = "caret"></b></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "page2.html">Getting an API Key</a></li>
+								<li><a href = "page3.html">Using Command Line</a></li>
+								<li><a href = "page4.html">Using Snoocore</a></li>
+							</ul>
+						</li>
+						<li><a href = "https://www.reddit.com/dev/api">Reddit API</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+	
+	<!-- Jumbotron -->
+	<div class = "container">
+		<div class = "jumbotron">
+			<div><h1>Making a Post on Reddit</h1></div>
+			<p></p>
+			<p>Now that we've learned all about our account, let's make our first post on Reddit using Snoocore and Reddit's API.</p>
+			
+			<p>We will be using the code below to make a post on the subreddit <a href="http://bottest.reddit.com/">/r/Bottest</a>.</p>
+			<iframe width="100%" height="300" src="https://jsfiddle.net/joanna4649/z47escp5/6/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p></p>
+
+			<p>Let's take a closer look at the code. First, to make a post to a subreddit, we need to know which subreddit to post to, the title of our post, and the content of our post. We can make a self post, whose content is comprised of text, or a link post, which when clicked, redirects to another site. In this case, we will make a link post. We declare those three pieces of information as variables, <code>SUBREDDIT</code>, <code>TITLE</code>, and <code>LINK</code> to be passed to a function later.</p>
+
+			<p>The oauth portion of the code is simple and straightforward. It is nearly same as the code from earlier, when we requested information about our account. However, note that the scope is different this time. On the Reddit API page, you can find what scope is necessary for a request by looking at the green box next to the request. For example, next to the <a href="https://www.reddit.com/dev/api/#POST_api_submit">/api/submit</a> request, one can see that 'submit' is necessary in the scope.</p>
+
+			<p>Now, the meat of the code, the function that submits the link. It's short and simple, but where did it come from? <a href="https://www.reddit.com/dev/api/">Reddit's wonderful API documentation</a>. The part that we're concerned with at the moment is shown below.</p>
+			
+			<img src="img/img5-1.png" class = "img-responsive">
+			<p id="hotfix1">p</p>
+			<p>The documentation walks us step-by-step through what parameters we need and what values they should be. We put the string <code>'json'</code> as the api_type since that is what the instructions tell us to do. Same with kind, sr, title, etc. The documentation also explains why we pass the boolean value <code>true</code> is given to resubmit. If it was false, we'd get an error if another person already submitted the same link, which is pretty likely! Isn't Reddit's API documentation great? </p>
+
+			<p>Let's look at our results. Check out <a href="https://www.reddit.com/r/bottest/">/r/bottest</a> to see if your link submitted properly. If it did, it should look something like this.</p>
+			<img src="img/img5-2.png" class = "img-responsive">
+			<p id="hotfix1">p</p>
+
+			<p>But wait... there's more! Let's see what's in our console.</p>
+			<img src="img/img5-3.png" class = "img-responsive">
+			<p id="hotfix1">p</p>
+			<p>The URL of our post is logged in our console, along with its unique Reddit ID. The ID of the post itself is <code>5de7wq</code>, and its full name is <code>t3_5de7wq</code>. The 't3' part indicates that it is a link post. The empty array of errors means we've successfully made our first Reddit post using Reddit's API. Hooray!</p>
+			<p id="hotfix1">p</p>
+			<p><a href = "page3.html" class = "btn btn-lg btn-default">&laquo; Previous</a> <a href = "page5.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
+		</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<div class = "navbar navbar-default navbar-fixed-bottom">
+		<div class = "container">
+			<p class = "navbar-text pull-left">Written by Joanna Lew</p>
+		</div>
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+	</body>
+</html>
