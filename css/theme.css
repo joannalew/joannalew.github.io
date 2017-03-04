@@ -2816,7 +2816,9 @@ input[type="button"].btn-block {
     color: #e52d27 !important
 }
 
-
+.vert-space{
+    height: 1px;
+}
 
 .navbar {
     position: relative;
