@@ -2817,7 +2817,7 @@ input[type="button"].btn-block {
 }
 
 .vert-space{
-    margin-bottom: 100px;
+    height: 100px;
 }
 
 .navbar {
