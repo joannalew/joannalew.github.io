@@ -2816,8 +2816,8 @@ input[type="button"].btn-block {
     color: #e52d27 !important
 }
 
-#new-header{
-    padding-bottom: 30px;
+.vert-space{
+    margin-bottom: 100px;
 }
 
 .navbar {
