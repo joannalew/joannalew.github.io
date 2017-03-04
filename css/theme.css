@@ -2817,14 +2817,14 @@ input[type="button"].btn-block {
 }
 
 .vert-space{
-    height: 20px;
+    height: 1px;
 }
 
 .navbar {
     position: relative;
     z-index: 9900;
     width: 100%;
-    min-height: 70px;
+    min-height: 80px;
     background-color: #fff;
     padding-left: 30px;
     top: 0;
@@ -2836,7 +2836,7 @@ input[type="button"].btn-block {
 }
 
 .navbar.navbar-sticky+* {
-    margin-top: 70px
+    margin-top: 80px
 }
 
 .site-logo {
