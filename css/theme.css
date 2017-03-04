@@ -2817,7 +2817,8 @@ input[type="button"].btn-block {
 }
 
 .vert-space{
-    height: 80px;
+    min-height: 80px;
+    padding: 20 20 20 20;
 }
 
 .navbar {
@@ -5183,7 +5184,6 @@ input[type="button"].btn-block {
 .hero-slider {
     width: 100%;
     overflow: hidden
-    top: 180px;
 }
 
 .hero-slider .slide {
