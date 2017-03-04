@@ -2816,6 +2816,10 @@ input[type="button"].btn-block {
     color: #e52d27 !important
 }
 
+.new-header{
+    padding-bottom: 30px;
+}
+
 .navbar {
     position: relative;
     z-index: 9900;
@@ -2823,7 +2827,6 @@ input[type="button"].btn-block {
     min-height: 80px;
     background-color: #fff;
     padding-left: 30px;
-    margin-bottom: 30px;
     top: 0;
     left: 0
 }
