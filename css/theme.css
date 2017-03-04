@@ -2824,7 +2824,7 @@ input[type="button"].btn-block {
     position: relative;
     z-index: 9900;
     width: 100%;
-    min-height: 80px;
+    min-height: 70px;
     background-color: #fff;
     padding-left: 30px;
     top: 0;
@@ -2836,7 +2836,7 @@ input[type="button"].btn-block {
 }
 
 .navbar.navbar-sticky+* {
-    margin-top: 80px
+    margin-top: 70px
 }
 
 .site-logo {
