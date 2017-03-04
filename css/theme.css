@@ -2823,6 +2823,7 @@ input[type="button"].btn-block {
     min-height: 80px;
     background-color: #fff;
     padding-left: 30px;
+    padding-bottom: 30px;
     top: 0;
     left: 0
 }
