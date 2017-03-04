@@ -5194,6 +5194,7 @@ input[type="button"].btn-block {
 
 .hero-slider .slide>.container {
     position: relative;
+    margin-top: -10px;
     display: table;
     width: 100% !important;
     max-width: 1170px !important;
