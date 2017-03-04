@@ -5183,7 +5183,7 @@ input[type="button"].btn-block {
 .hero-slider {
     width: 100%;
     overflow: hidden
-    margin-top: 80px;
+    top: 80px;
 }
 
 .hero-slider .slide {
