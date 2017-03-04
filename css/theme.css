@@ -2817,8 +2817,7 @@ input[type="button"].btn-block {
 }
 
 .vert-space{
-    height: 20px;
-    padding: 0px;
+    height: 1px;
 }
 
 .navbar {
