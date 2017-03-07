@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+		<title>Reddit API Tutorial</title>
+
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+	</head>
+
+	<body>
+
+	<!-- Navbar -->
+		<div class = "navbar navbar-default navbar-static-top">
+			<div class = "container">
+				<a href = "index.html" class = "navbar-brand">Reddit API Tutorial</a>
+				
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-left">
+						<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Navigation<b class = "caret"></b></a>
+							<ul class = "dropdown-menu">
+								<li><a href = "page2.html">Getting an API Key</a></li>
+								<li><a href = "page3.html">Using Command Line</a></li>
+								<li><a href = "page4.html">Using Snoocore</a></li>
+								<li><a href = "page5.html">Making a Post</a></li>
+								<li><a href = "page6.html">Upvoting a Post</a></li>
+								<li><a href = "page7.html">Making the Bot</a></li>
+							</ul>
+						</li>
+						<li><a href = "https://www.reddit.com/dev/api">Reddit API</a></li>
+						<li><a href = "https://github.com/trevorsenior/snoocore">Snoocore</a></li>
+						<li><a href = "https://nodejs.org/en/">Node.js</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+	
+	<!-- Jumbotron -->
+	<div class = "container">
+		<div class = "jumbotron">
+			<div><h1>Using the Reddit API</h1></div>
+			<p></p>
+			<p>Now that you have a Reddit API Key, you can use Reddit's API to do all sorts of fun things. Let's say you want to pull up some information about your account. There are several ways you can do so.</p>
+
+			<div><h2>Method #1: Using Terminal or Command Line</h2></div> 
+			<p>To use Terminal or Command Line to get information from Reddit, we must first get a token. In Terminal or Command Line, copy and paste in the following:</p>
+			<p><code>curl -X POST -d 'grant_type=password&username=REDDIT_USERNAME&password=REDDIT_PASSWORD' --user 'CLIEND_ID:CLIENT_SECRET' https://www.reddit.com/api/v1/access_token</code></p>
+			<p>Replace <code>REDDIT_USERNAME</code> with your Reddit username, <code>REDDIT_PASSWORD</code> with your Reddit password, <code>CLIENT_ID</code> with your app's client ID, and <code>CLIENT_SECRET</code> with your app's client secret. You can find your ID and secret on your <a href="https://www.reddit.com/prefs/apps">app preferences</a> page.</p>
+			<img src="img/img3-1.png" class="img-responsive">
+			<p>Now we have a temporary token. Note that it expires in 3600 seconds (or an hour), so once that time is up, we'll have to repeat the step above to get another token.</p>
+			<p>We can use our token to request information about our account. To do so, copy and paste the following into Terminal or Command Line:</p>
+			<p><code>curl -H "Authorization: bearer CLIENT_TOKEN" -A "PROJECT_NAME by REDDIT_USERNAME" https://oauth.reddit.com/api/v1/me</code></p>
+			<p>Replace <code>CLIENT_TOKEN</code> with the token you acquired earlier, <code>PROJECT_NAME</code> with the name of your bot or your project, and <code>REDDIT_USERNAME</code> with your Reddit username.</p>
+			<p><img src="img/img3-2.png" class="img-responsive"></p>
+			<p id="hotfix1">p</p>
+			<p>Let's look at the info returned to us. We can see that our account is not a Reddit employee account, has no mail, is named BeamMeUpBotty, and all sorts of other things. Pretty cool, right?</p>
+
+			<p id="hotfix1">p</p>
+			<p><a href = "page2.html" class = "btn btn-lg btn-default">&laquo; Previous</a>
+			<a href = "page4.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
+		</div>
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<div class = "navbar navbar-default navbar-fixed-bottom">
+		<div class = "container">
+			<p class = "navbar-text pull-left">Written by Joanna Lew</p>
+		</div>
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+
+	</body>
+</html>

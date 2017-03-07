@@ -50,13 +50,30 @@
 	<!-- Jumbotron -->
 	<div class = "container">
 		<div class = "jumbotron">
-			<div class = "text-center"><h1>Reddit API Tutorial</h1></div>
-			<div class = "text-center" id="title2">Making a Reddit Bot with Javascript</div>
+			<div><h1>Using the Reddit API</h1></div>
 			<p></p>
-			<p><img src = "img/img1-1.jpg"></p>
-			<p>Reddit is a magical place on the Internet that can make hours and hours of a person's life mysteriously disappear. On Reddit, there are many webpages, or subreddits, dedicated to people's various interests. For example, starving college students might go on <a href="https://www.reddit.com/r/FoodPorn/">/r/FoodPorn</a> to look at pictures of delicious food. Fans of Netflix's Stranger Things might go on <a href="https://www.reddit.com/r/StrangerThings/">/r/StrangerThings</a> to discuss their favorite theory. Have some spare time? Procrastinating on a big project? Spend some <a href="http://i3.kym-cdn.com/photos/images/facebook/000/509/312/a1e.png">time</a> on Reddit, and browse to your heart's content.</p>
-			<p id = "somespace">Today, we will be learning how to work with Reddit's API using Node.js. We will do so by making a Reddit bot that can perform simple actions, such as creating posts, making comments, and upvoting posts.</p>
-			<p><div class = "text-center"><a href = "page2.html" class = "btn btn-lg btn-primary">Let's get started! &raquo;</a></div></p>
+			<p>At this point, you're probably thinking, "Hey! This is nifty, but where's the Javascript?" So let's move on to the fun stuff!</p>
+			
+			<div><h2>Method #2: Using a Wrapper</h2></div>
+			<p>Wrappers allow for easy access to Reddit's API and make its use much simpler. A list of unofficial clients for Reddit's API can be found <a href="https://github.com/reddit/reddit/wiki/API-Wrappers">here</a>. In this tutorial, we will be using <a href="https://github.com/trevorsenior/snoocore">Snoocore</a>, a Node.js Wrapper.</p>
+			<ol>
+			<li>First, make sure you have Node.js. If you don't, you can download it <a href="https://nodejs.org/en/">here</a>.</li>
+			<li>Make a directory for your bot. We will call our project directory BotFolder.</li>
+			<li>In your directory, install Snoocore by typing <code>npm install snoocore</code> in Terminal or Command Line.<p></p>
+				<img src="img/img4-1.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+			
+			<li>Make a file named "app.js" in your project directory.</li>
+			<li>In the "app.js" file, copy and paste the following code. Put in a name for your userAgent, such as "FuturamaBot by /u/BeamMeUpBotty". Put in your client ID, client secret, Reddit username, and Reddit password. Then, save the file.</li>
+			<p><script async src="https://jsfiddle.net/joanna4649/qprqc0g9/1/embed/js/"></script></p>
+			<li>Now, back in Terminal or Command Line, run app.js by typing <code>node app.js</code>.<p></p>
+				<img src="img/img4-2.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+			<p>We now have all the information about our account, just like what we got using Terminal. But enough with the account information. Let's actually do something and write some code.</p>
+
+			<p id="hotfix1">p</p>
+			<p><a href = "page3.html" class = "btn btn-lg btn-default">&laquo; Previous</a>
+			<a href = "page5.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
 		</div>
 		</div>
 	</div>

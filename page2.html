@@ -6,7 +6,7 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 
 		<title>Reddit API Tutorial</title>
-		
+
 		<link href = "css/bootstrap.min.css" rel = "stylesheet">
 		<link href = "css/styles.css" rel = "stylesheet">
 	</head>
@@ -50,13 +50,29 @@
 	<!-- Jumbotron -->
 	<div class = "container">
 		<div class = "jumbotron">
-			<div class = "text-center"><h1>Reddit API Tutorial</h1></div>
-			<div class = "text-center" id="title2">Making a Reddit Bot with Javascript</div>
+			<div><h1>Getting a Reddit API Key</h1></div>
 			<p></p>
-			<p><img src = "img/img1-1.jpg"></p>
-			<p>Reddit is a magical place on the Internet that can make hours and hours of a person's life mysteriously disappear. On Reddit, there are many webpages, or subreddits, dedicated to people's various interests. For example, starving college students might go on <a href="https://www.reddit.com/r/FoodPorn/">/r/FoodPorn</a> to look at pictures of delicious food. Fans of Netflix's Stranger Things might go on <a href="https://www.reddit.com/r/StrangerThings/">/r/StrangerThings</a> to discuss their favorite theory. Have some spare time? Procrastinating on a big project? Spend some <a href="http://i3.kym-cdn.com/photos/images/facebook/000/509/312/a1e.png">time</a> on Reddit, and browse to your heart's content.</p>
-			<p id = "somespace">Today, we will be learning how to work with Reddit's API using Node.js. We will do so by making a Reddit bot that can perform simple actions, such as creating posts, making comments, and upvoting posts.</p>
-			<p><div class = "text-center"><a href = "page2.html" class = "btn btn-lg btn-primary">Let's get started! &raquo;</a></div></p>
+			<p>To use the Reddit API, we must first make a Reddit account and get an API Key.</p>
+			<ol class = "getKey">
+
+			<li>First, let's make an account on <a href="https://www.reddit.com/">Reddit</a>.<p></p>
+				<img src="img/img2-1.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+
+			<li>Once you have your account, log in and go to your <a href="https://www.reddit.com/prefs/apps/">app preferences</a>.</li>
+			<p></p>
+
+			<li>Click the "Create an app" button, and fill out the form shown. Name your app as you wish, check the "script" button, write a short description, and use "http://www.example.com/unused/redirect/uri" as the redirect uri (we will not be using the uri). Finish by clicking the "create app" button.<p></p>
+				<img src="img/img2-2.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+
+			<li>And voila! You should have received an API Key, along with a nifty client ID for your app. Don't let your ID or secret fall into the hands of any nefarious individuals! Some thief might steal your precious bot!<p></p>
+				<img src="img/img2-3.png" class="img-responsive"></li>
+			<p id="hotfix1">p</p>
+			</ol>
+			<p id="hotfix1">p</p>
+			<p><a href = "index.html" class = "btn btn-lg btn-default">&laquo; Previous</a>
+			<a href = "page3.html" class = "btn btn-lg btn-primary">Next &raquo;</a></p>
 		</div>
 		</div>
 	</div>
