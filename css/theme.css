@@ -3019,7 +3019,7 @@ input[type="button"].btn-block {
     width: 120px;
     height: 100%;
     top: -2px;
-    right: 30px
+    right: -15px
 }
 
 .toolbar .inner {
@@ -3413,7 +3413,8 @@ input[type="button"].btn-block {
 
 @media screen and (max-width: 1070px) {
     .toolbar {
-        width: 160px
+        width: 160px;
+        right: -25px;
     }
     .toolbar .inner>a.mobile-menu-toggle {
         display: table-cell
@@ -3504,7 +3505,7 @@ input[type="button"].btn-block {
         padding-left: 15px
     }
     .toolbar {
-        right: 20px
+        right: -25px
     }
 }
 
