@@ -50,129 +50,11 @@
   <!-- Page Wrapper -->
   <div class="page-wrapper">
 
-    <!-- Navbar -->
-    <!-- Remove ".navbar-sticky" class to make navigation bar scrollable with the page. -->
-    <header class="navbar navbar-sticky">
-
-      <!-- Site Logo -->
-      <a href="index.html" class="site-logo visible-desktop">
-        <span>[</span> M
-        <span class="text-gray">/</span>
-        STORE <span>]</span>
-      </a><!-- site-logo.visible-desktop -->
-      <a href="index.html" class="site-logo visible-mobile">
-        <span>[</span> M <span>]</span>
-      </a><!-- site-logo.visible-mobile -->
-
-      <!-- Language Switcher -->
-      <div class="lang-switcher">
-        <div class="lang-toggle">
-          <img src="img/flags/GB.png" alt="English">
-          <i class="material-icons arrow_drop_down"></i>
-          <ul class="lang-dropdown">
-            <li><a href="shop-single.html#"><img src="img/flags/FR.png" alt="French">FR</a></li>
-            <li><a href="shop-single.html#"><img src="img/flags/DE.png" alt="German">DE</a></li>
-            <li><a href="shop-single.html#"><img src="img/flags/IT.png" alt="Italian">IT</a></li>
-          </ul>
-        </div>
-      </div><!-- .lang-switcher -->
-
-      <!-- Main Navigation -->
-      <!-- Control the position of navigation via modifier classes: "text-left, text-center, text-right" -->
-      <nav class="main-navigation text-center">
-        <ul class="menu">
-          <li class="menu-item-has-children">
-            <a href="shop-single.html#">Home</a>
-            <ul class="sub-menu">
-              <li><a href="index.html">Home Version 1</a></li>
-              <li><a href="home-v2.html">Home Version 2</a></li>
-              <li><a href="home-v3.html">Home Version 3</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children current-menu-item">
-            <a href="shop-single.html#">Shop</a>
-            <ul class="sub-menu">
-              <li><a href="shop-fullwidth-sl.html">Full Width Sidebar Left</a></li>
-              <li><a href="shop-fullwidth-sr.html">Full Width Sidebar Right</a></li>
-              <li><a href="shop-fullwidth-ft.html">Full Width Filters Top</a></li>
-              <li><a href="shop-boxed-sl.html">Boxed Sidebar Left</a></li>
-              <li><a href="shop-boxed-sr.html">Boxed Sidebar Right</a></li>
-              <li><a href="shop-boxed-ft.html">Boxed Filters Top</a></li>
-              <li class="current-menu-item"><a href="shop-single.html">Single Product</a></li>
-              <li><a href="shopping-cart.html">Shopping Cart</a></li>
-              <li><a href="checkout.html">Checkout</a></li>
-              <li><a href="login.html">Login / Register Page</a></li>
-              <li><a href="account.html">User Account Page</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="menu-item-has-children">
-            <a href="shop-single.html#">Gallery</a>
-            <ul class="sub-menu">
-              <li><a href="gallery-fullwidth-with-gap.html">Full Width With Gap</a></li>
-              <li><a href="gallery-fullwidth-no-gap.html">Full Width No Gap</a></li>
-              <li><a href="gallery-boxed-with-gap.html">Boxed With Gap</a></li>
-              <li><a href="gallery-boxed-no-gap.html">Boxed No Gap</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li class="hidden-md"><a href="elements.html">Elements</a></li>
-        </ul><!-- .menu -->
-      </nav><!-- .main-navigation -->
-
-      <!-- Toolbar -->
-      <div class="toolbar">
-        <div class="inner">
-          <a href="shop-single.html#" class="mobile-menu-toggle"><i class="material-icons menu"></i></a>
-          <a href="account.html"><i class="material-icons person"></i></a>
-          <div class="cart-btn">
-            <a href="shopping-cart.html">
-              <i>
-                <span class="material-icons shopping_basket"></span>
-                <span class="count">2</span>
-              </i>
-            </a>
-            <!-- Cart Dropdown -->
-            <div class="cart-dropdown">
-              <div class="cart-item">
-                <a href="shop-single.html" class="item-thumb">
-                  <img src="img/cart/item01.jpg" alt="Item">
-                </a>
-                <div class="item-details">
-                  <h3 class="item-title"><a href="shop-single.html">Concrete Lamp</a></h3>
-                  <h4 class="item-price">1 x $85.90</h4>
-                </div>
-                <a href="shop-single.html#" class="close-btn">
-                  <i class="material-icons close"></i>
-                </a>
-              </div><!-- .cart-item -->
-              <div class="cart-item">
-                <a href="shop-single.html" class="item-thumb">
-                  <img src="img/cart/item02.jpg" alt="Item">
-                </a>
-                <div class="item-details">
-                  <h3 class="item-title"><a href="shop-single.html">Storage Box</a></h3>
-                  <h4 class="item-price">2 x $38.00</h4>
-                </div>
-                <a href="shop-single.html#" class="close-btn">
-                  <i class="material-icons close"></i>
-                </a>
-              </div><!-- .cart-item -->
-              <div class="cart-subtotal">
-                <div class="column">
-                  <span>Subtotal:</span>
-                </div>
-                <div class="column">
-                  <span class="amount">$161.90</span>
-                </div>
-              </div>
-            </div><!-- .cart-dropdown -->
-          </div><!-- .cart-btn -->
-        </div><!-- .inner -->
-      </div><!-- .toolbar -->
-    </header><!-- .navbar.navbar-sticky -->
+      <div class="vert-space" id="new-header"></div>
+  <script>
+        $('#new-header').load('header.html'); 
+        console.log("worked");
+  </script>
 
     <!-- Pager + Product Gallery -->
     <section class="fw-section bg-gray padding-top-3x">
@@ -283,17 +165,15 @@
       <!-- Nav Tabs -->
       <ul class="nav-tabs text-center" role="tablist">
         <li class="active"><a href="shop-single.html#description" role="tab" data-toggle="tab">Description</a></li>
-        <li><a href="shop-single.html#additional" role="tab" data-toggle="tab">Additional Info</a></li>
-        <li><a href="shop-single.html#reviews" role="tab" data-toggle="tab">Reviews <sup>3</sup></a></li>
+        <li><a href="shop-single.html#additional" role="tab" data-toggle="tab">Specs</a></li>
+        <li><a href="shop-single.html#reviews" role="tab" data-toggle="tab">Additional Info</a></li>
       </ul><!-- .nav-tabs -->
       <!-- Tab panes -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane transition fade in active" id="description">
           <div class="row space-top">
             <div class="col-md-6 space-bottom">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://player.vimeo.com/video/105829213?color=77cde3&amp;title=0&amp;byline=0&amp;portrait=0" allowfullscreen></iframe>
-              </div>
+              <img src="img/blog/01.jpg">
             </div>
             <div class="col-md-6">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam hic totam, tempore quos dicta voluptate tempora ex voluptatum amet, veniam assumenda magnam eveniet eius reiciendis, ab necessitatibus quis iure libero.</p>
@@ -582,27 +462,7 @@
         </div><!-- .social-bar -->
         <p class="copyright">&copy; 2016. Made with <i class="text-danger material-icons favorite"></i> by rokaux.</p>
       </div><!-- .column -->
-      <div class="column">
-        <h3 class="widget-title">
-          Subscription
-          <small>To receive latest offers and discounts from the shop.</small>
-        </h3>
-        <form action="http://rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;id=1194bb7544" method="post" target="_blank" class="subscribe-form" novalidate>
-          <input type="email" class="form-control" name="EMAIL" placeholder="Your e-mail">
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1" value=""></div>
-          <button type="submit"><i class="material-icons send"></i></button>
-        </form>
-      </div><!-- .column -->
-      <div class="column">
-        <h3 class="widget-title">
-          Payment Methods
-          <small>We support one of the following payment methods.</small>
-        </h3>
-        <div class="cards"><img src="img/cards.png" alt="Cards"></div>
-        <!-- Scroll To Top Button -->
-        <div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>
-      </div><!-- .column -->
+      
     </footer><!-- .footer -->
 
   </div><!-- .page-wrapper -->
