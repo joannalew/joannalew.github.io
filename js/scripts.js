@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 		$('body').addClass('hasScrollbar');
 	}
 
-	
+	/*****
 	// Disable default link behavior for dummy links that have href='#'
 	//------------------------------------------------------------------------------
 	var $emptyLink = $('a[href=#]');
@@ -69,6 +69,7 @@ jQuery(document).ready(function($) {
 	    }
 	  });
 	}
+	***/
 	
 
 
