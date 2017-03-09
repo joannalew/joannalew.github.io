@@ -3411,7 +3411,7 @@ input[type="button"].btn-block {
     transform: translateY(0) scale(1)
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1090px) {
     .toolbar {
         width: 160px;
         right: -25px;
