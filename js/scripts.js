@@ -293,8 +293,10 @@ jQuery(document).ready(function($) {
 
 		galleryThumb.parent().removeClass('active');
 		$(this).parent().addClass('active');
+		console.log("active-worked");
 		galleryPreview.removeClass('current');
 		$(target).addClass('current');
+		console.log("current-worked");
 
 		e.preventDefault();
 	});
