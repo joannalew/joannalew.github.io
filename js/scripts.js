@@ -295,8 +295,6 @@ jQuery(document).ready(function($) {
 		$(this).parent().addClass('active');
 		galleryPreview.removeClass('current');
 		$(target).addClass('current');
-		console.log(target);
-
 
 		e.preventDefault();
 	});
