@@ -2569,20 +2569,28 @@ input[type="button"].btn-block {
     color: #e52d27 !important
 }
 
+.vert-space{
+    min-height: 80px;
+    padding: 20 20 20 20;
+}
+
 .navbar {
-    position: fixed;
+    position: relative;
     z-index: 9900;
     width: 100%;
-    min-height: 70px;
+    min-height: 80px;
     background-color: #fff;
-    border-bottom: 1px solid #f0f0f0;
     padding-left: 30px;
     top: 0;
     left: 0
 }
 
-.navbar+* {
-    margin-top: 70px
+.navbar.navbar-sticky {
+    position: fixed
+}
+
+.navbar.navbar-sticky+* {
+    margin-top: 80px
 }
 
 .site-logo {
@@ -2594,7 +2602,7 @@ input[type="button"].btn-block {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    padding: 20px 0;
+    padding: 25px 0;
     margin-right: 20px
 }
 
@@ -2611,7 +2619,7 @@ input[type="button"].btn-block {
 
 .site-logo img {
     width: 100%;
-    max-width: 115px
+    max-width: 100px
 }
 
 .site-logo.visible-mobile {
@@ -2623,14 +2631,12 @@ input[type="button"].btn-block {
         z-index: 20;
         margin-right: 15px
     }
-    .site-logo.visible-desktop {
-        display: none
-    }
+   
     .site-logo.visible-mobile {
         display: inline-block
     }
     .site-logo img {
-        max-width: 42px
+        max-width: 100px
     }
 }
 
