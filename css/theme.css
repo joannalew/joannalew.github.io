@@ -1419,8 +1419,6 @@ table {
 
 table>thead>tr>th,
 table>thead>tr>td,
-table>tbody>tr>th,
-table>tbody>tr>td,
 table>tfoot>tr>th,
 table>tfoot>tr>td {
     padding: 15px;
@@ -1437,6 +1435,13 @@ table>thead>tr>td {
 table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 1px solid #ededed
+}
+
+table>tbody>tr>th,
+table>tbody>tr>td {
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top
 }
 
 table>caption+thead>tr:first-child>th,
@@ -4652,7 +4657,6 @@ input[type="button"].btn-block {
 
 .product-share .social-bar {
     display: inline-block;
-    margin: 12px 0
 }
 
 .review-respond .tile form h3 {
