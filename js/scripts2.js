@@ -114,6 +114,32 @@ jQuery(document).ready(function($) {
 		langSwitcher.removeClass('open');
 	});
 
+	// Toggle Mobile Menu
+	//------------------------------------------------------------------------------
+	var menuToggle = $('.mobile-menu-toggle'),
+			mobileMenu = $('.main-navigation');
+	menuToggle.on('click', function() {
+		$(this).toggleClass('active');
+		mobileMenu.toggleClass('open');
+	});
+
+
+	// Toggle Submenu
+	//------------------------------------------------------------------------------
+	var $hasSubmenu = $('.menu-item-has-children > a');
+
+	function closeSubmenu() {
+		$hasSubmenu.parent().removeClass('active');
+	}
+	$hasSubmenu.on('click', function(e) {
+		if($(e.target).parent().is('.active')) {
+			closeSubmenu();
+		} else {
+			closeSubmenu();
+			$(this).parent().addClass('active');
+		}
+	});
+
 
 	// Toolbar Toggles
 	//------------------------------------------------------------------------------
