@@ -4467,6 +4467,11 @@ input[type="button"].btn-block {
     padding-top: 0
 }
 
+.filter-button{
+    font-size: 12px;
+    padding: 0 0 20 0;
+}
+
 .product-gallery {
     position: relative;
     width: 100%;
