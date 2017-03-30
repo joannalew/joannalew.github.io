@@ -4467,11 +4467,6 @@ input[type="button"].btn-block {
     padding-top: 0
 }
 
-.filter-button{
-    font-size: 12px;
-    padding: 0 0 20 0;
-}
-
 .product-gallery {
     position: relative;
     width: 100%;
@@ -4644,6 +4639,7 @@ input[type="button"].btn-block {
     margin: 12px 12px 12px 0
 }
 
+
 .text-center .product-tools>*,
 .text-center.product-tools>* {
     margin-left: 6px;
@@ -4654,6 +4650,10 @@ input[type="button"].btn-block {
 .text-right.product-tools>* {
     margin-left: 12px;
     margin-right: 0
+}
+
+.product-tools>img{
+    height: 60px;
 }
 
 .product-share {
