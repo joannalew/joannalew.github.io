@@ -4654,6 +4654,7 @@ input[type="button"].btn-block {
 
 .product-tools>img{
     height: 60px;
+    max-height: 60px;
 }
 
 .product-share {
