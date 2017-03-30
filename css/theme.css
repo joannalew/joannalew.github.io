@@ -4107,7 +4107,7 @@ input[type="button"].btn-block {
 }
 
 .shop-item {
-    width: 100%;
+    width: auto;
     margin-bottom: 36px
 }
 
@@ -4654,7 +4654,6 @@ input[type="button"].btn-block {
 
 .product-tools>img{
     height: 60px;
-    max-height: 60px;
 }
 
 .product-share {
