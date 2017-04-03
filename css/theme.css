@@ -4107,7 +4107,7 @@ input[type="button"].btn-block {
 }
 
 .shop-item {
-    width: auto;
+    width: 100%;
     margin-bottom: 36px
 }
 
@@ -4639,7 +4639,6 @@ input[type="button"].btn-block {
     margin: 12px 12px 12px 0
 }
 
-
 .text-center .product-tools>*,
 .text-center.product-tools>* {
     margin-left: 6px;
@@ -4653,7 +4652,7 @@ input[type="button"].btn-block {
 }
 
 .product-tools>img{
-    height: 60px;
+height: 60px;
 }
 
 .product-share {
