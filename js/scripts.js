@@ -70,6 +70,21 @@ jQuery(document).ready(function($) {
 	  });
 	}
 	*****/
+
+	// Load More (Index Page)
+	$(function () {
+    $(".shop-item").slice(0, 4).show();
+    $(".load-more-btn").on('click', function (e) {
+        e.preventDefault();
+        $(".shop-item:hidden").slice(0, 4).slideDown();
+        if ($(".shop-item:hidden").length == 0) {
+            $(".load-more-btn").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+	});
 	
 
 
@@ -175,6 +190,26 @@ jQuery(document).ready(function($) {
 			});
 		}
 	});
+
+
+	// Custom Filter (Changed)
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
 
 
 	// Shop Filters Toggle

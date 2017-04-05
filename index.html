@@ -174,26 +174,16 @@
       <div class="filters-bar space-top-half">
         <div class="column">
           <!-- Nav Filters -->
-          <ul class="nav-filters">
-            <li class="active"><a href="index.html#">All</a></li>
-            <li><a href="index.html#">Bike Light</a></li>
-            <li><a href="index.html#">Drones</a></li>
-            <li><a href="index.html#">Earphones</a></li>
-            <li><a href="index.html#">HUD</a></li>
-            <li><a href="index.html#">USB Cables</a></li>
-            <li><a href="index.html#">VR Headsets</a></li>
-          </ul><!-- .nav-filters -->
+          <button class = "btn btn-primary btn-sm filter-button" data-filter = "all">All</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "bike">Bike Light</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "drones">Drones</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "earphones">Earphones</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "hud">HUD</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "usb">USB Cables</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "vr">VR Headsets</button>
         </div><!-- .column -->
-        <div class="column">
-          <a href="#filters" class="filters-toggle" data-toggle="filters">
-            <i class="material-icons filter_list"></i>
-            Filters
-          </a>
-          <a href="#search-box" class="search-btn" data-toggle="filters">
-            <i class="material-icons search"></i>
-          </a>
-        </div>
-      </div><!-- .filters-bar -->
+        
+
       <div class="row filters">
         <div class="col-xs-12 filters-pane" id="filters">
           <div class="row">
@@ -268,7 +258,7 @@
       <div class="row">
 
         <!-- Item -->
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 filter bike">
           <div class="shop-item">
             <div class="shop-thumbnail">
               <span class="shop-label text-danger">Sale</span>
@@ -297,7 +287,7 @@
         </div><!-- .col-md-4.col-sm-6 -->
 
         <!-- Item -->
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 filter drones">
           <div class="shop-item">
             <div class="shop-thumbnail">
               <a href="shop-single.html" class="item-link"></a>
@@ -324,7 +314,7 @@
         </div><!-- .col-md-4.col-sm-6 -->
 
         <!-- Item -->
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 filter earphones">
           <div class="shop-item">
             <div class="shop-thumbnail">
               <a href="shop-single.html" class="item-link"></a>
