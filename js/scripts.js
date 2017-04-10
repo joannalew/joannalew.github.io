@@ -541,12 +541,24 @@ jQuery(document).ready(function($) {
       autoPlay: 3000, //Set AutoPlay to 3 seconds
  
       items : 4,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3],
-
       nav: true,
       navText: [ , ],
       loop: true,
+
+      responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        800:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
  
   	});
 

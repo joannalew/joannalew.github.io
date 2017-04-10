@@ -6927,11 +6927,13 @@ screen and (max-height: 300px) {
 
 
 
-
 #owl-demo{
-    width: 1190px;
+    padding-left: 45px;
+    padding-right: 45px;
+    max-width: 1250px;
     margin: auto;
 }
+
 #owl-demo .item{
   margin: 15px;
 }
