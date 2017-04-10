@@ -2065,6 +2065,23 @@ input[type="button"].btn-block {
     text-decoration: none
 }
 
+#load-more {
+    display: block;
+    width: 100%;
+    padding: 0px 0;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+#load-more:hover {
+    color: #999;
+    text-decoration: none
+}
+
 .social-signup-btn {
     position: relative;
     display: block;

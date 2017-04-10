@@ -551,6 +551,24 @@ jQuery(document).ready(function($) {
   	});
 
 
+
+	// Load More (Index Page)
+	//------------------------------------------------------------------------------
+    var size_li = $("#shop-catalog div").size();
+    var x = 15;
+    $('#shop-catalog div:lt('+x+')').show();
+    $('#load-more').click(function () {
+        x= (x+15 <= size_li) ? x+15 : size_li;
+        $('#shop-catalog div:lt('+x+')').show();
+    });
+    $('#showLess').click(function () {
+        x=(x-5<0) ? 12 : x-5;
+        $('#shop-catalog div').not(':lt('+x+')').hide();
+    });
+
+
+
+
 	// Range Slider
 	//------------------------------------------------------------------------------
 	var rangeSlider  = document.querySelector('.ui-range-slider');
