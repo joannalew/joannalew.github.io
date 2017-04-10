@@ -533,6 +533,24 @@ jQuery(document).ready(function($) {
 	}
 
 
+
+	// Owl Carousel (Small)
+	//------------------------------------------------------------------------------
+	$("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3],
+
+      nav: true,
+      navText: [ , ],
+      loop: true,
+ 
+  	});
+
+
 	// Range Slider
 	//------------------------------------------------------------------------------
 	var rangeSlider  = document.querySelector('.ui-range-slider');

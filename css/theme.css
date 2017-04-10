@@ -3652,6 +3652,7 @@ input[type="button"].btn-block {
     margin-top: -20px;
     width: 40px;
     height: 40px;
+    border-radius: 50px;
     line-height: 40px;
     text-align: center;
     font-size: 18px;
@@ -6906,6 +6907,63 @@ screen and (max-height: 300px) {
         display: none
     }
 }
+
+
+
+
+#owl-demo{
+    width: 95%;
+    margin: auto;
+}
+#owl-demo .item{
+  margin: 15px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#owl-demo .item .shop-item-details {
+    display: table;
+    width: 100%;
+    padding-top: 24px
+}
+
+#owl-demo .item .shop-item-details .shop-item-title,
+#owl-demo .item .shop-item-details .shop-item-price {
+    display: table-cell;
+    vertical-align: top
+}
+
+#owl-demo .item .shop-item-details .shop-item-title {
+    width: 50%;
+    font-size: 16px;
+    font-weight: normal
+}
+
+#owl-demo .item .shop-item-details .shop-item-title>a {
+    color: #999;
+    text-decoration: none
+}
+
+#owl-demo .item .shop-item-details .shop-item-price {
+    width: 50%;
+    font-size: 16px;
+    text-align: right
+}
+
+#owl-demo .item .shop-item-details .shop-item-price .old-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through
+}
+
+
+
+
+
+
 
 .footer {
     display: table;
