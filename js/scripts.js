@@ -533,54 +533,6 @@ jQuery(document).ready(function($) {
 	}
 
 
-
-	// Owl Carousel (Small)
-	//------------------------------------------------------------------------------
-	$(".owl-demo").owlCarousel({
- 
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
-      items : 4,
-      nav: true,
-      navText: [ , ],
-      loop: true,
-
-      responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        800:{
-            items:3
-        },
-        1000:{
-            items:4
-        }
-    }
- 
-  	});
-
-
-
-	// Load More (Index Page)
-	//------------------------------------------------------------------------------
-    var size_li = $("#shop-catalog div").size();
-    var x = 15;
-    $('#shop-catalog div:lt('+x+')').show();
-    $('#load-more').click(function () {
-        x= (x+15 <= size_li) ? x+15 : size_li;
-        $('#shop-catalog div:lt('+x+')').show();
-    });
-    $('#showLess').click(function () {
-        x=(x-5<0) ? 12 : x-5;
-        $('#shop-catalog div').not(':lt('+x+')').hide();
-    });
-
-
-
-
 	// Range Slider
 	//------------------------------------------------------------------------------
 	var rangeSlider  = document.querySelector('.ui-range-slider');
@@ -673,5 +625,52 @@ jQuery(document).ready(function($) {
 			});
 		});
 	}
+
+		// Owl Carousel (Small)
+	//------------------------------------------------------------------------------
+	$(".owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 4,
+      nav: true,
+      navText: [ , ],
+      loop: true,
+
+      responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        800:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+ 
+  	});
+
+
+
+	// Load More (Index Page)
+	//------------------------------------------------------------------------------
+    var size_li = $("#shop-catalog div").size();
+    var x = 15;
+    $('#shop-catalog div:lt('+x+')').show();
+    $('#load-more').click(function () {
+        x= (x+15 <= size_li) ? x+15 : size_li;
+        $('#shop-catalog div:lt('+x+')').show();
+    });
+    $('#showLess').click(function () {
+        x=(x-5<0) ? 12 : x-5;
+        $('#shop-catalog div').not(':lt('+x+')').hide();
+    });
+
+
+
 
 });/*Document Ready End*/

@@ -6966,6 +6966,11 @@ screen and (max-height: 300px) {
     text-decoration: none
 }
 
+.owl-demo .item .shop-item-details .shop-item-title>a:hover {
+    color: #77cde3;
+    text-decoration: none
+}
+
 .owl-demo .item .shop-item-details .shop-item-price {
     width: 50%;
     font-size: 16px;
