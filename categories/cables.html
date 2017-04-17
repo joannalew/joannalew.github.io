@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>M-Store | Modern E-Commerce Template</title>
+
+  <!--SEO Meta Tags-->
+  <meta name="description" content="M-Store - Modern E-Commerce Template" />
+  <meta name="keywords" content="shop, e-commerce, modern, minimalist style, responsive, online store, business, mobile, blog, bootstrap, html5, css3, jquery, js, gallery, slider, touch, creative, clean" />
+  <meta name="author" content="Rokaux" />
+
+  <!--Mobile Specific Meta Tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <!-- Google Material Icons -->
+  <link href="../css/vendor/material-icons.min.css" rel="stylesheet" media="screen">
+
+  <!-- Brand Icons -->
+  <link href="../css/vendor/socicon.min.css" rel="stylesheet" media="screen">
+
+  <!-- Bootstrap -->
+  <link href="../css/vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  <!-- Theme Styles -->
+  <link href="../css/theme.css" rel="stylesheet" media="screen">
+
+  <!-- Page Preloading -->
+  <script src="../js/vendor/page-preloading.js"></script>
+
+  <!-- Modernizr -->
+  <script src="../js/vendor/modernizr.custom.js"></script>
+
+  <script src="../js/vendor/jquery-2.1.4.min.js"></script>
+</head>
+
+<!-- Body -->
+<!-- Adding/Removing class ".page-preloading" is enabling/disabling background smooth page transition effect and spinner. Make sure you also added/removed link to page-preloading.js script in the <head> of the document. -->
+<body class="page-preloading">
+
+  <!-- Page Pre-Loader -->
+  <div class="page-preloader">
+    <div class="preloader">
+      <img src="../img/preloader.gif" alt="Preloader">
+    </div>
+  </div><!-- .page-preloader -->
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Navbar -->
+      <div class="vert-space" id="new-header"></div>
+  <script>
+        $('#new-header').load('header.html'); 
+  </script>
+
+    <!-- Hero Slider -->
+    <!-- Data API:
+      data-loop="true/false" enable/disable looping
+      data-autoplay="true/false" enable/disable carousel autoplay
+      data-interval="3000" autoplay interval timeout in miliseconds
+      Simply add necessary data attribute to the ".hero-carousel" with appropriate value to adjust carousel functionality.
+     -->
+    <section class="hero-slider" data-loop="true" data-autoplay="true" data-interval="7000">
+      <div class="inner">
+        <div class="slide" style="background-image: url('../img/categories/cables.jpg');">
+          <div class="container text-center padding-top-3x">
+            <span class="h1 from-bottom"><strong>USB Charging Cables</strong></span><br>
+            <span class="h2 from-bottom"><span class="text-thin">Tangle Free with Lifetime Warranty</span></span><br>
+          </div>
+        </div><!-- .slide -->
+        <div class="slide" style="background-image: url('../img/categories/cables.jpg');">
+          <div class="container text-center padding-top-3x">
+            <span class="h1 from-bottom"><strong>USB Charging Cables</strong></span><br>
+            <span class="h2 from-bottom"><span class="text-thin">Nylon Braided: soft to touch &amp; lasting durability</span></span><br>
+          </div>
+        </div><!-- .slide -->
+      </div><!-- .inner -->
+    </section><!-- .hero-slider -->
+
+
+<!-- Brands -->
+    <section class="container padding-top-2x padding-bottom">
+      <h3 class="text-center padding-top-2x">Products' Brand</h3>
+      <div class="row padding-top">
+        <!-- Brand -->
+        <div style="margin-left: 30%; margin-right: 30%">
+          <a href="../categories/cables.html" class="brand">
+            <div class="brand-logo opacity-75" style="max-width: none; width: 100%">
+              <img src="../images/brands/slync.svg" alt="Brand">
+            </div>
+            <p class="brand-text" style="text-align: center">Sonic Devices’ own brand of quality mobile accessories, from charging cables to earphones.</p>
+          </a>
+        </div>
+        
+        
+      </div><!-- .row -->
+      <hr>
+    </section><!-- .container -->
+
+
+
+    <!-- Filters Bar -->
+    <section class="container padding-top-1x">
+      <div class="filters-bar space-top-half">
+        <div class="column">
+          <!-- Nav Filters -->
+          <button class = "btn btn-primary btn-sm filter-button" data-filter = "all">All</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "light">Lightning</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "micro">Micro</button>
+          <button class = "btn btn-default btn-sm filter-button" data-filter = "c">Type C</button>
+        </div><!-- .column -->
+        
+
+      <div class="row filters">
+        <div class="col-xs-12 filters-pane" id="filters">
+          <div class="row">
+            <div class="col-md-3">
+
+              <!-- Sorting Widget -->
+              <div class="widget widget-sorting">
+                <h3 class="widget-title">Sort By</h3>
+                <ul>
+                  <li><a href="index.html#">
+                    <i class="material-icons sort_by_alpha"></i>
+                    Alphabetically
+                  </a></li>
+                  <li><a href="index.html#">
+                    <i class="material-icons star_border"></i>
+                    Brand
+                  </a></li>
+                </ul>
+              </div><!-- .widget.widget-sorting -->
+            </div>
+            
+            <div class="col-md-4">
+
+              <!-- Price Range Widget -->
+              <!-- Please note: Only one Range Slider allowed on the page! -->
+              <div class="widget widget-catesgories">
+                <h3 class="widget-title">Price Range</h3>
+                <form method="post" class="price-range-slider" data-start-min="170" data-start-max="240" data-min="100" data-max="300" data-step="1">
+                  <div class="ui-range-slider"></div>
+                  <footer class="ui-range-slider-footer">
+                    <div class="column">
+                      <button type="submit" class="btn btn-ghost btn-sm btn-default">Filter</button>
+                    </div>
+                    <div class="column">
+                      <div class="ui-range-values">
+                        <div class="ui-range-value-min">
+                          $<span></span>
+                          <input type="hidden">
+                        </div> -
+                        <div class="ui-range-value-max">
+                          $<span></span>
+                          <input type="hidden">
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                </form><!-- .price-range-slider -->
+              </div><!-- .widget.widget-categories -->
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+
+              <!-- Tags Widget -->
+              <div class="widget widget-tags">
+                <h3 class="widget-title">Popular Tags</h3>
+                <a href="index.html#">Gaming</a>
+                <a href="index.html#">Safety</a>
+                <a href="index.html#">Driving</a>
+                <a href="index.html#">Charging</a>
+                <a href="index.html#">Camera Drones</a>
+              </div><!-- .widget.widget-price -->
+            </div>
+          </div><!-- .row -->
+        </div><!-- .col-xs-12.filters-pane#filters -->
+        <form class="col-xs-12 filters-pane" id="search-box">
+          <input type="text" class="form-control" placeholder="Type and hit enter">
+        </form><!-- .col-xs-12.filters-pane#search-box -->
+      </div><!-- .row.filters -->
+    </section><!-- .container -->
+
+    <!-- Shop Catalog -->
+    <section class="container padding-bottom-3x">
+      <div class="row">
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter light">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/lightning.html" class="item-link"></a>
+              <img src="../img/shop/LIGHTNING-th.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/lightning.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/lightning.html">Lightning Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter micro">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/micro.html" class="item-link"></a>
+              <img src="../img/shop/MICRO-th.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/micro.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/micro.html">Micro USB Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter c">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/typec.html" class="item-link"></a>
+              <img src="../img/shop/TYPEC-gold.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/typec.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/typec.html">Type C Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter light">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/lightning.html" class="item-link"></a>
+              <img src="../img/shop/light-gold.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/lightning.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/lightning.html">Lightning Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter micro">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/micro.html" class="item-link"></a>
+              <img src="../img/shop/micro-silver.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/micro.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/micro.html">Micro USB Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter c">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/typec.html" class="item-link"></a>
+              <img src="../img/shop/typec-pink.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/typec.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/typec.html">Type C Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter light">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/lightning.html" class="item-link"></a>
+              <img src="../img/shop/light-pink.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/lightning.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/lightning.html">Lightning Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter micro">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/micro.html" class="item-link"></a>
+              <img src="../img/shop/MICRO-gold.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/micro.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/micro.html">Micro USB Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter c">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/typec.html" class="item-link"></a>
+              <img src="../img/shop/TYPEC-th.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/typec.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../slync/typec.html">Type C Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+
+        <!-- Item -->
+        <div class="col-md-4 col-sm-6 filter light">
+          <div class="shop-item">
+            <div class="shop-thumbnail">
+              <a href="../slync/lightning.html" class="item-link"></a>
+              <img src="../img/shop/light-gray.jpg" alt="Shop item">
+              <div class="shop-item-tools">
+                <a href="../slync/lightning.html" class="add-to-cart">
+                  <em>Learn More</em>
+                  <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="shop-item-details">
+              <h3 class="shop-item-title"><a href="../shop-single.html">Lightning Cable</a></h3>
+              <span class="shop-item-price">
+                Price varies
+              </span>
+            </div>
+          </div><!-- .shop-item -->
+        </div><!-- .col-md-4.col-sm-6 -->
+      </div><!-- .row -->
+
+      <!-- Load More Btn -->
+      <a href="index.html#" class="load-more-btn space-top">Load More</a>
+    </section><!-- .container -->
+
+    <!-- Footer -->
+    <footer class="footer space-top-2x">
+      <div class="column">
+        <p class="text-sm">Need support? <br> <i class="material-icons">email</i> <span class="text-primary">sales@sonicdevices.net</span></p>
+        
+        <p class="copyright">Copyright &copy; 2017. Sonic Devices, LLC. <br>All Rights Reserved</p>
+      </div><!-- .column -->
+      
+    </footer><!-- .footer -->
+
+  </div><!-- .page-wrapper -->
+
+  <!-- JavaScript (jQuery) libraries, plugins and custom scripts -->
+  <script src="../js/vendor/bootstrap.min.js"></script>
+  <script src="../js/vendor/smoothscroll.js"></script>
+  <script src="../js/vendor/velocity.min.js"></script>
+  <script src="../js/vendor/waves.min.js"></script>
+  <script src="../js/vendor/icheck.min.js"></script>
+  <script src="../js/vendor/owl.carousel.min.js"></script>
+  <script src="../js/vendor/nouislider.min.js"></script>
+  <script src="../js/scripts.js"></script>
+
+</body><!-- <body> -->
+
+</html>
