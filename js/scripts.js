@@ -655,14 +655,13 @@ jQuery(document).ready(function($) {
   	});
 
 
-
-	// Load More (Index Page)
+	// Load More (Index Page; 5 each)
 	//------------------------------------------------------------------------------
     var size_li = $("#shop-catalog div").size();
-    var x = 15;
+    var x = 45;
     $('#shop-catalog div:lt('+x+')').show();
     $('#load-more').click(function () {
-        x= (x+15 <= size_li) ? x+15 : size_li;
+        x= (x+45 <= size_li) ? x+45 : size_li;
         $('#shop-catalog div:lt('+x+')').show();
     });
     $('#showLess').click(function () {
