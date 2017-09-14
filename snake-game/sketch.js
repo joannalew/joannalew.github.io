@@ -4,7 +4,7 @@ var scl = 20;		 // for grid
 function setup(){
 	createCanvas(600, 600);
 	s = new snake();
-	frameRate(20);
+	frameRate(15);
 
 	pickLocation();
 }
