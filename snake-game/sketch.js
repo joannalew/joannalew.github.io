@@ -20,6 +20,7 @@ function pickLocation(){
 
 function draw(){
 	background(51);
+	s.death();
 	s.update();
 	s.show();
 
@@ -43,5 +44,3 @@ function keyPressed(){
 		s.dir(1, 0);
 	}
 }
-
-console.log("hello world");

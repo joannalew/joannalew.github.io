@@ -16,6 +16,20 @@ function snake(){
 		}
 	}
 
+	this.death = function(){
+		for (var i = 0; i < this.tail.length; i++){
+			var pos = this.tail[i];
+			var d = dist(this.x, this.y, pos.x, pos.y);
+			if (d < 1){
+				this.total = 0;
+				this.tail = [];
+				this.x = 0;
+				this.y = 0;
+				console.log("game over");
+			}
+		}
+	}
+
 	this.update = function(){
 		if (this.total === this.tail.length){
 			for (var i = 0; i < this.tail.length - 1; i++){
@@ -38,7 +52,7 @@ function snake(){
 		for (var i = 0 ; i < this.tail.length; i++){
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
 		}
-		
+
 		fill(255);
 		rect(this.x, this.y, scl, scl);
 	}
