@@ -81,6 +81,35 @@ Location: https://helloworld-180602.appspot.com/user/ahNzfmhlbGxvd29ybGQtMTgwNjA
 }
 ```
 
+#### Get a List of Users
+
+**<code>Get</code> /user** 
+
+```
+Response:
+
+Status: 200 OK
+-----------------------------------------------------------------
+{"Users": [
+ {
+  "username": "NotBruceWayne",
+  "password": "ActuallyBatman",
+  "name": null,
+  "URL": "imbatman@gmail.com",
+  "current_listing": null,
+  "self": "/user/ahNzfmhlbGxvd29ybGQtMTgwNjAychELEgRVc2VyGICAgICvnJEKDA"
+ },
+ {
+  "username": "helloworld42",
+  "password": "hunter2",
+  "name": null,
+  "URL": "someemail@hotmail.com",
+  "current_listing": null,
+  "self": "/user/opNzftVh30djd29ybGQtMTpcWjAychELEgRPc2VyGICAgICvnJEKMV"
+ }]
+} 
+```
+
 #### Add a Listing
 
 **<code>POST</code> /listing** 
